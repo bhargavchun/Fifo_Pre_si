@@ -1,0 +1,145 @@
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:15:51 on Jan 31,2025
+# vlog -reportprogress 300 -source -lint readptr_empty.sv 
+# -- Compiling module readptr_empty
+###### readptr_empty.sv(29):   assign rempty_val = (rgraynext == rq2_wr_ptr);
+# 
+# ** Warning: readptr_empty.sv(29): (vlog-2623) Undefined variable: rempty_val.
+# 
+# Top level modules:
+# 	readptr_empty
+# End time: 18:15:52 on Jan 31,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:15:52 on Jan 31,2025
+# vlog -reportprogress 300 -source -lint sync_read2w.sv 
+# -- Compiling module sync_read2w
+# 
+# Top level modules:
+# 	sync_read2w
+# End time: 18:15:52 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:15:52 on Jan 31,2025
+# vlog -reportprogress 300 -source -lint sync_write2r.sv 
+# -- Compiling module sync_write2r
+# 
+# Top level modules:
+# 	sync_write2r
+# End time: 18:15:52 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:15:52 on Jan 31,2025
+# vlog -reportprogress 300 -source -lint fifomem.sv 
+# -- Compiling module fifomem
+# 
+# Top level modules:
+# 	fifomem
+# End time: 18:15:53 on Jan 31,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:15:53 on Jan 31,2025
+# vlog -reportprogress 300 -source -lint Asynch_fifo_top.sv 
+# -- Compiling module async_fifo
+# 
+# Top level modules:
+# 	async_fifo
+# End time: 18:15:53 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:15:53 on Jan 31,2025
+# vlog -reportprogress 300 -source -lint writeptr_full.sv 
+# -- Compiling module writeptr_full
+###### writeptr_full.sv(28):   assign w_full_val = (wgraynext=={~wq2_rptr[Addr_size:Addr_size-1], wq2_rptr[Addr_size-2:0]});
+# 
+# ** Warning: writeptr_full.sv(28): (vlog-2623) Undefined variable: w_full_val.
+# 
+# Top level modules:
+# 	writeptr_full
+# End time: 18:15:53 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 18:15:53 on Jan 31,2025
+# vlog -reportprogress 300 -source -lint async_fifo_tb.sv 
+# -- Compiling module async_fifo_tb
+# 
+# Top level modules:
+# 	async_fifo_tb
+# End time: 18:15:53 on Jan 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.async_fifo_tb 
+# Start time: 18:15:53 on Jan 31,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.async_fifo_tb(fast)
+# Verifying the rdata: Passed at time 76	expected wdata = 49, rdata = 49
+# Verifying the rdata: Passed at time 92	expected wdata = 7a, rdata = 7a
+# Verifying the rdata: Passed at time 108	expected wdata = 7e, rdata = 7e
+# Verifying the rdata: Passed at time 124	expected wdata = da, rdata = da
+# Verifying the rdata: Passed at time 140	expected wdata = 4e, rdata = 4e
+# Verifying the rdata: Passed at time 156	expected wdata = 02, rdata = 02
+# Verifying the rdata: Passed at time 172	expected wdata = 9b, rdata = 9b
+# Verifying the rdata: Passed at time 188	expected wdata = d9, rdata = d9
+# Verifying the rdata: Passed at time 204	expected wdata = 4c, rdata = 4c
+# Verifying the rdata: Passed at time 220	expected wdata = 57, rdata = 57
+# Verifying the rdata: Passed at time 236	expected wdata = 9b, rdata = 9b
+# Verifying the rdata: Passed at time 252	expected wdata = cf, rdata = cf
+# Verifying the rdata: Passed at time 268	expected wdata = f3, rdata = f3
+# Verifying the rdata: Passed at time 284	expected wdata = 46, rdata = 46
+# Verifying the rdata: Passed at time 300	expected wdata = 10, rdata = 10
+# Verifying the rdata: Passed at time 316	expected wdata = 80, rdata = 80
+# Verifying the rdata: Passed at time 332	expected wdata = d8, rdata = d8
+# Verifying the rdata: Passed at time 348	expected wdata = 2c, rdata = 2c
+# Verifying the rdata: Passed at time 364	expected wdata = 88, rdata = 88
+# Verifying the rdata: Passed at time 380	expected wdata = 07, rdata = 07
+# Verifying the rdata: Passed at time 396	expected wdata = e3, rdata = e3
+# Verifying the rdata: Passed at time 412	expected wdata = f3, rdata = f3
+# Verifying the rdata: Passed at time 428	expected wdata = 50, rdata = 50
+# Verifying the rdata: Passed at time 444	expected wdata = e2, rdata = e2
+# Verifying the rdata: Passed at time 460	expected wdata = 73, rdata = 73
+# Verifying the rdata: Passed at time 476	expected wdata = bb, rdata = bb
+# Verifying the rdata: Passed at time 492	expected wdata = fc, rdata = fc
+# Verifying the rdata: Passed at time 508	expected wdata = ae, rdata = ae
+# Verifying the rdata: Passed at time 524	expected wdata = cf, rdata = cf
+# Verifying the rdata: Passed at time 540	expected wdata = b6, rdata = b6
+# Verifying the rdata: Passed at time 556	expected wdata = c7, rdata = c7
+# Verifying the rdata: Passed at time 572	expected wdata = 37, rdata = 37
+# Verifying the rdata: Passed at time 1580	expected wdata = 1a, rdata = 1a
+# Verifying the rdata: Passed at time 1596	expected wdata = 88, rdata = 88
+# Verifying the rdata: Passed at time 1612	expected wdata = 7b, rdata = 7b
+# Verifying the rdata: Passed at time 1628	expected wdata = 84, rdata = 84
+# Verifying the rdata: Passed at time 1644	expected wdata = 0c, rdata = 0c
+# Verifying the rdata: Passed at time 1660	expected wdata = ba, rdata = ba
+# Verifying the rdata: Passed at time 1676	expected wdata = b9, rdata = b9
+# Verifying the rdata: Passed at time 1692	expected wdata = 48, rdata = 48
+# Verifying the rdata: Passed at time 1708	expected wdata = f9, rdata = f9
+# Verifying the rdata: Passed at time 1724	expected wdata = 90, rdata = 90
+# Verifying the rdata: Passed at time 1740	expected wdata = 90, rdata = 90
+# Verifying the rdata: Passed at time 1756	expected wdata = fd, rdata = fd
+# Verifying the rdata: Passed at time 1772	expected wdata = db, rdata = db
+# Verifying the rdata: Passed at time 1788	expected wdata = 6e, rdata = 6e
+# Verifying the rdata: Passed at time 1804	expected wdata = b9, rdata = b9
+# Verifying the rdata: Passed at time 1820	expected wdata = a3, rdata = a3
+# Verifying the rdata: Passed at time 1836	expected wdata = 4e, rdata = 4e
+# Verifying the rdata: Passed at time 1852	expected wdata = 6f, rdata = 6f
+# Verifying the rdata: Passed at time 1868	expected wdata = 9a, rdata = 9a
+# Verifying the rdata: Passed at time 1884	expected wdata = 89, rdata = 89
+# Verifying the rdata: Passed at time 1900	expected wdata = b5, rdata = b5
+# Verifying the rdata: Passed at time 1916	expected wdata = 7b, rdata = 7b
+# Verifying the rdata: Passed at time 1932	expected wdata = 58, rdata = 58
+# Verifying the rdata: Passed at time 1948	expected wdata = 8e, rdata = 8e
+# Verifying the rdata: Passed at time 1964	expected wdata = a8, rdata = a8
+# Verifying the rdata: Passed at time 1980	expected wdata = 89, rdata = 89
+# Verifying the rdata: Passed at time 1996	expected wdata = ac, rdata = ac
+# Verifying the rdata: Passed at time 2012	expected wdata = a5, rdata = a5
+# Verifying the rdata: Passed at time 2028	expected wdata = 21, rdata = 21
+# Verifying the rdata: Passed at time 2044	expected wdata = 9d, rdata = 9d
+# Verifying the rdata: Passed at time 2060	expected wdata = f6, rdata = f6
+# Verifying the rdata: Passed at time 2076	expected wdata = a9, rdata = a9
+# ** Note: $finish    : async_fifo_tb.sv(70)
+#    Time: 3084 ns  Iteration: 0  Instance: /async_fifo_tb
+# 1
+# Break at async_fifo_tb.sv line 70
