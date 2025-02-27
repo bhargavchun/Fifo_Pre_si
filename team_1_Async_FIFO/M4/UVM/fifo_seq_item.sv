@@ -1,6 +1,5 @@
 
 class fifo_seq_item #(parameter  DATASIZE = 8, ADDRSIZE = 9) extends uvm_sequence_item;
-    `uvm_object_utils(fifo_seq_item #(DATASIZE,ADDRSIZE)) // registering the class to factory
 
     rand bit w_inc;
     rand bit r_inc;
@@ -10,6 +9,22 @@ class fifo_seq_item #(parameter  DATASIZE = 8, ADDRSIZE = 9) extends uvm_sequenc
     bit [DATASIZE-1:0] rdata;
     bit rempty, wfull;
     bit [ADDRSIZE:0] waddr, raddr;
+      
+    `uvm_object_utils_begin(fifo_seq_item #(DATASIZE,ADDRSIZE)) // registering the class to factory
+
+ // Using UVM field macros for automation
+    `uvm_field_int(w_inc, UVM_ALL_ON)
+    `uvm_field_int(r_inc, UVM_ALL_ON)
+    `uvm_field_int(w_rst, UVM_ALL_ON)
+    `uvm_field_int(r_rst, UVM_ALL_ON)
+    `uvm_field_int(wdata, UVM_ALL_ON)
+    `uvm_field_int(rdata, UVM_ALL_ON)
+    `uvm_field_int(rempty, UVM_ALL_ON)
+    `uvm_field_int(wfull, UVM_ALL_ON)
+    `uvm_field_int(waddr, UVM_ALL_ON)
+    `uvm_field_int(raddr, UVM_ALL_ON)
+  
+    `uvm_object_utils_end
     
     // Constraint for reset
     constraint no_rst { w_rst == 0 && r_rst == 0; }
@@ -48,3 +63,6 @@ class fifo_seq_item #(parameter  DATASIZE = 8, ADDRSIZE = 9) extends uvm_sequenc
         super.new(name);
     endfunction
 endclass
+
+
+
